@@ -18,6 +18,7 @@ let
 in
 {
   environment.systemPackages = with stable; [
+    unstable.zed-editor
     unstable.lazygit
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     fuzzel
