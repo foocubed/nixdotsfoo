@@ -54,6 +54,7 @@
           ./niri.nix
           ./waybar.nix
           ./ghostty.nix
+          ./wezterm.nix
           {
             nix.settings.trusted-users = [ "foo" ];
           }
