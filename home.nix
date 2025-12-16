@@ -63,7 +63,6 @@ in
       window_padding_width = 50;
       shell = "fish";
       sync_to_monitor = "yes";
-      hide_window_decorations = "yes";
     };
     themeFile = "Modus_Operandi_Tinted";
   };
