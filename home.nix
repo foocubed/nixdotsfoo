@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -64,7 +63,7 @@ in
       window_padding_width = 50;
       shell = "fish";
       sync_to_monitor = "yes";
-      hide_window_decorations="yes";
+      hide_window_decorations = "yes";
     };
     themeFile = "Modus_Operandi_Tinted";
   };
@@ -83,8 +82,8 @@ in
     ];
     generateCompletions = true;
     shellInit = ''
-    		source ~/NixDotsFoo/fish/functions/n.fish
-      		  '';
+      		source ~/NixDotsFoo/fish/functions/n.fish
+        		  '';
   };
   programs.zoxide = {
     enable = true;
@@ -115,10 +114,10 @@ in
           # If the extension you want to enable is packaged in nixpkgs,
           # you can easily get its UUID by accessing its extensionUuid
           # field (look at the following example).
-	  pkgs.gnomeExtensions.accent-directories.extensionUuid
+          pkgs.gnomeExtensions.accent-directories.extensionUuid
           #pkgs.gnomeExtensions.blur-my-shell.extensionUuid
           pkgs.gnomeExtensions.just-perfection.extensionUuid
-	  pkgs.gnomeExtensions.luminus-desktop.extensionUuid
+          pkgs.gnomeExtensions.luminus-desktop.extensionUuid
         ];
       };
       "org/gnome/desktop/interface" = {
@@ -173,9 +172,9 @@ in
     "--colour=always"
     "--group-directories-first"
   ];
-  programs.helix.enable=true;
-  programs.helix.package=unstable.helix;
-  programs.helix.settings = { 
-    theme="monokai_soda";
-   };
+  programs.helix.enable = true;
+  programs.helix.package = unstable.helix;
+  programs.helix.settings = {
+    theme = "monokai_soda";
+  };
 }

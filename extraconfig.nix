@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 {
   networking.hostName = "foo"; # Define your hostname.
   networking.nftables.enable = true;
@@ -23,13 +22,13 @@
   };
   virtualisation.containers.enable = true;
   virtualisation = {
-  podman = {
-    enable = true;
-    # Create a `docker` alias for podman, to use it as a drop-in replacement
-    # Required for containers under podman-compose to be able to talk to each other.
-    defaultNetwork.settings.dns_enabled = true;
+    podman = {
+      enable = true;
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
+    };
   };
-};
   services = {
     syncthing = {
       enable = true;
@@ -38,7 +37,7 @@
       dataDir = "/home/foo/Documents"; # Default folder for new synced folders
       configDir = "/home/foo/Documents/.config/syncthing"; # Folder for Syncthing's settings and keys
     };
-  }; 
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

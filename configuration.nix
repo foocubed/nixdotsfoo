@@ -1,8 +1,5 @@
 {
   pkgs,
-  config,
-  nixpkgs-stable,
-  nixpkgs-unstable,
   ...
 }:
 
@@ -66,4 +63,4 @@
   nixpkgs.config.allowUnfree = true;
   networking.hostId = "a5ecb278";
   system.stateVersion = "24.11";
- }
+}

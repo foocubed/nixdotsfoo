@@ -1,11 +1,8 @@
 {
-  config,
-  lib,
   inputs,
   ...
 }:
 let
-  system = "x86_64-linux";
   unstable = import inputs.nixpkgs-unstable {
     system = "x86_64-linux";
     config.allowUnfree = true;
@@ -18,6 +15,9 @@ let
 in
 {
   environment.systemPackages = with stable; [
+    unstable.nixd
+    unstable.nix-ld
+    unstable.nixfmt
     unstable.zed-editor
     unstable.lazygit
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww

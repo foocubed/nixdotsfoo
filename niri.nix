@@ -1,4 +1,8 @@
-{ pkgs, lib, inputs, config, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   # Import the unstable channel with system + config
