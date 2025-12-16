@@ -1,7 +1,7 @@
-{ pkgs,inputs,...}:
+{ pkgs, inputs, ... }:
 
 {
-environment.systemPackages = [
-            ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-          ];
+  environment.systemPackages = [
+    inputs.ghostty.packages.${pkgs.system}.default
+  ];
 }
