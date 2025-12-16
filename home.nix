@@ -173,16 +173,6 @@ in
     "--colour=always"
     "--group-directories-first"
   ];
-  programs.vscode.enable = true;
-  programs.vscode.package = unstable.vscode;
-  programs.vscode.profiles.default.extensions = [
-    unstable.vscode-extensions.llvm-vs-code-extensions.vscode-clangd
-    unstable.vscode-extensions.rust-lang.rust-analyzer
-    unstable.vscode-extensions.jnoortheen.nix-ide
-    unstable.vscode-extensions.astro-build.astro-vscode
-    unstable.vscode-extensions.github.copilot
-    unstable.vscode-extensions.github.copilot-chat
-  ];
   programs.helix.enable=true;
   programs.helix.package=unstable.helix;
   programs.helix.settings = { 

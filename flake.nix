@@ -25,6 +25,7 @@
     niri.inputs.nixpkgs.follows = "nixpkgs-unstable";
     waybar.url = "github:Alexays/Waybar/master";
     awww.url = "git+https://codeberg.org/LGFae/awww";
+    ghostty.url = "github:ghostty-org/ghostty";
  };
 
   outputs =
@@ -36,15 +37,17 @@
       disko,
       niri,
       waybar,
+      ghostty,
       ...
     }@inputs:
     {
       nixosConfigurations.foo = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+      ./configuration.nix
 	  ./niri.nix
 	  ./waybar.nix
+	  ./ghostty.nix
 	  {
 	  nix.settings.trusted-users = [ "foo" ];
 	  }
@@ -53,7 +56,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.foo = { pkgs, ... }: { imports = [ ./home.nix ./nirihomemanager.nix ]; };
+            home-manager.users.foo = { pkgs, ... }: { imports = [ ./home.nix  ]; };
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
