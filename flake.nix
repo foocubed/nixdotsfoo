@@ -26,6 +26,7 @@
     waybar.url = "github:Alexays/Waybar/master";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     ghostty.url = "github:ghostty-org/ghostty";
+    zed.url = "github:zed-industries/zed";
  };
 
   outputs =
@@ -48,6 +49,7 @@
 	  ./niri.nix
 	  ./waybar.nix
 	  ./ghostty.nix
+	  ./zed.nix
 	  {
 	  nix.settings.trusted-users = [ "foo" ];
 	  }

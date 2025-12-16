@@ -30,12 +30,11 @@ in
     unstable.gapless
     unstable.amberol
     unstable.distroshelf
-    unstable.zed-editor
     devpod
     distrobox
     ispell
     hunspellDicts.en_US
-    unstable.fractal  			     
+    unstable.fractal
     unstable.cachix
     unstable.emacs-lsp-booster
     unstable.helix
@@ -143,4 +142,3 @@ in
 
   ];
 }
-
