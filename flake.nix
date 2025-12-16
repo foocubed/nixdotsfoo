@@ -16,12 +16,13 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
     disko.url = "github:nix-community/disko/latest";
     disko.inputs.nixpkgs.follows = "nixpkgs-unstable";
     niri.url = "github:sodiboo/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs-unstable";
     waybar.url = "github:Alexays/Waybar/master";
     awww.url = "git+https://codeberg.org/LGFae/awww";
  };
@@ -52,7 +53,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.foo = import ./home.nix;
+            home-manager.users.foo = { pkgs, ... }: { imports = [ ./home.nix ./nirihomemanager.nix ]; };
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
