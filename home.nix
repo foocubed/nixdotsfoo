@@ -30,8 +30,8 @@ in
     enable = true;
     settings = {
       user = {
-        name = "foo";
-        email = "foo@foo.com";
+        name = "foocubed";
+        email = "foocubed@gmail.com";
       };
     };
   };
