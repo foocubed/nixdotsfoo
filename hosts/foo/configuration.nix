@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
     ./extraconfig.nix
     ./packages.nix
-    ./emacs.nix
     ./disk-config.nix
   ];
 

@@ -31,7 +31,6 @@ in
     unstable.gapless
     unstable.amberol
     unstable.distroshelf
-    devpod
     distrobox
     ispell
     hunspellDicts.en_US
@@ -48,19 +47,14 @@ in
     unstable.zellij
     unstable.ptyxis
     unstable.ffmpeg
-    unstable.fastfetch
     unstable.firefox
     unstable.foliate
-    unstable.elvish
-    unstable.carapace
-    unstable.uutils-coreutils
-    unstable.nushell
     yt-dlp
     pavucontrol
     brlaser
-    lynx
     imagemagick
     lieer
+    lynx
     notmuch
     mission-center
     pciutils
