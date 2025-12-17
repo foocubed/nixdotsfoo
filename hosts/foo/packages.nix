@@ -6,7 +6,7 @@ let
   unstable = import inputs.nixpkgs-unstable {
     system = "x86_64-linux";
     config.allowUnfree = true;
-    overlays = [ (import ./overlays/nnn.nix) ];
+    overlays = [ (import ./../../overlays/nnn.nix) ];
   };
   stable = import inputs.nixpkgs-stable {
     system = "x86_64-linux";
