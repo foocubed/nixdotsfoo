@@ -5,5 +5,6 @@
     ./niri.nix
     ./waybar.nix
     ./wezterm.nix
+    ./nh.nix
   ];
 }
