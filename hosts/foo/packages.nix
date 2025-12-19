@@ -15,6 +15,7 @@ let
 in
 {
   environment.systemPackages = with stable; [
+    aporetic
     unstable.nixd
     unstable.nix-ld
     unstable.nixfmt
