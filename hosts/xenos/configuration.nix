@@ -54,9 +54,12 @@
       "podman"
       "docker"
     ];
-
+    initialPassword = "4321";
+    packages = with pkgs; [
+      #  thunderbird
+    ];
   };
   nixpkgs.config.allowUnfree = true;
-  networking.hostId = "a5ecb278";
+  networking.hostId = "a5ecb378";
   system.stateVersion = "24.11";
 }

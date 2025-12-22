@@ -2,8 +2,9 @@
   pkgs,
   ...
 }:
+
 {
-  networking.hostName = "foo"; # Define your hostname.
+  networking.hostName = "xenos"; # Define your hostname.
   networking.nftables.enable = true;
   networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [

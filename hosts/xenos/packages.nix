@@ -1,0 +1,140 @@
+{
+  inputs,
+  ...
+}:
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = "x86_64-linux";
+    config.allowUnfree = true;
+    overlays = [ (import ./../../overlays/nnn.nix) ];
+  };
+  stable = import inputs.nixpkgs-stable {
+    system = "x86_64-linux";
+    config.allowUnfree = true;
+  };
+in
+{
+  environment.systemPackages = with stable; [
+    aporetic
+    unstable.nixd
+    unstable.nix-ld
+    unstable.nixfmt
+    unstable.zed-editor
+    unstable.lazygit
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+    fuzzel
+    font-awesome
+    texmacs
+    mesa
+    unstable.celluloid
+    unstable.clapper
+    unstable.clapper-enhancers
+    unstable.gapless
+    unstable.amberol
+    unstable.distroshelf
+    distrobox
+    ispell
+    hunspellDicts.en_US
+    unstable.fractal
+    unstable.cachix
+    unstable.emacs-lsp-booster
+    unstable.helix
+    unstable.skim
+    unstable.rclone
+    maple-mono.truetype
+    maple-mono.NF-unhinted
+    maple-mono.NF-CN-unhinted
+    nfs-utils
+    unstable.zellij
+    unstable.ptyxis
+    unstable.ffmpeg
+    unstable.firefox
+    unstable.foliate
+    yt-dlp
+    pavucontrol
+    brlaser
+    imagemagick
+    lieer
+    lynx
+    notmuch
+    mission-center
+    pciutils
+    unstable.devenv
+    unstable.gnomeExtensions.blur-my-shell
+    unstable.gnomeExtensions.just-perfection
+    unstable.gnomeExtensions.luminus-desktop
+    unstable.gnomeExtensions.accent-directories
+    unstable.fishPlugins.fzf-fish
+    unstable.fishPlugins.autopair
+    unstable.neovim
+    unstable.kitty
+    unstable.yazi
+    unstable.television
+    unstable.fzf
+    unstable.ripgrep
+    unstable.ripgrep-all
+    unstable.zoxide
+    unstable.bottom
+    unstable.bat
+    unstable.bat-extras.batgrep
+    unstable.bat-extras.batdiff
+    unstable.bat-extras.batpipe
+    unstable.bat-extras.batman
+    unstable.bat-extras.batwatch
+    unstable.bat-extras.prettybat
+    unstable.broot
+    unstable.choose
+    unstable.duf
+    unstable.dust
+    unstable.eza
+    unstable.fd
+    unstable.mcfly
+    unstable.lsd
+    unstable.procs
+    unstable.sd
+    unstable.curlie
+    unstable.doggo
+    unstable.gping
+    unstable.httpie
+    unstable.jq
+    unstable.hyperfine
+    unstable.rtorrent
+    unstable.obsidian
+    unstable.joplin-desktop
+    unstable.nnn
+    unstable.octaveFull
+    unstable.discord
+    unstable.texliveFull
+    unstable.vscode
+    unstable.calibre
+    unstable.syncthing
+    unstable.hugo
+    unstable.texlab
+    unstable.newsboat
+    unstable.starship
+    unstable.inter
+    unstable.noto-fonts
+    unstable.morewaita-icon-theme
+    unzip
+    tor-browser
+    keepassxc
+    unstable.google-chrome
+    unstable.librewolf-bin
+    unstable.ungoogled-chromium
+    unstable.fish
+    sageWithDoc
+    sagetex
+    geogebra6
+    git
+    wget
+    curl
+    neomutt
+    unstable.thunderbird
+    qbittorrent
+    unstable.mpv
+    libreoffice
+    julia-bin
+    gnome-tweaks
+
+  ];
+}
