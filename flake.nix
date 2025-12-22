@@ -73,7 +73,7 @@
       nixosConfigurations.xenos = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/foo/configuration.nix
+          ./hosts/xenos/configuration.nix
           ./nixosModules
           {
             nix.settings = {
