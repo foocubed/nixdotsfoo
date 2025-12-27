@@ -52,7 +52,7 @@ in
     package = unstable.kitty;
     enable = true;
     font = {
-      name = "FantasqueSansM Nerd Font Bold";
+      name = "Aporetic Sans Mono";
       size = 16;
     };
     shellIntegration.enableFishIntegration = true;
@@ -64,7 +64,7 @@ in
       shell = "fish";
       sync_to_monitor = "yes";
     };
-    themeFile = "Modus_Operandi_Tinted";
+    themeFile = "Monokai";
   };
   programs.fish = {
     enable = true;

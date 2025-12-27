@@ -15,6 +15,7 @@ let
 in
 {
   environment.systemPackages = with stable; [
+    monaspace
     aporetic
     unstable.nixd
     unstable.nix-ld
