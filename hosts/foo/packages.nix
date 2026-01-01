@@ -120,7 +120,6 @@ in
     tor-browser
     keepassxc
     unstable.google-chrome
-    unstable.librewolf-bin
     unstable.ungoogled-chromium
     unstable.fish
     sageWithDoc

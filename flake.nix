@@ -16,6 +16,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
     wezterm.url = "github:wezterm/wezterm?dir=nix";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    deploy-rs.url = "github:serokell/deploy-rs";
   };
 
   outputs =
@@ -30,6 +31,7 @@
       ghostty,
       wezterm,
       emacs-overlay,
+      deploy-rs,
       ...
     }@inputs:
     {
@@ -107,5 +109,16 @@
           }
         ];
       };
+
+      deploy.nodes.xenos = {
+        hostname = "xenos";
+        profiles.system = {
+          user = "root";
+          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.xenos;
+        };
+      };
+
+      # This is highly advised, and will prevent many possible mistakes
+      checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
     };
 }
