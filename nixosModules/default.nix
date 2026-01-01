@@ -6,5 +6,6 @@
     ./waybar.nix
     ./wezterm.nix
     ./nh.nix
+    ./hyprland.nix
   ];
 }
