@@ -17,7 +17,7 @@
     wezterm.url = "github:wezterm/wezterm?dir=nix";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     deploy-rs.url = "github:serokell/deploy-rs";
-    inputs.hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =
@@ -33,6 +33,7 @@
       wezterm,
       emacs-overlay,
       deploy-rs,
+      hyprland,
       ...
     }@inputs:
     {
