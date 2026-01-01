@@ -17,6 +17,7 @@
     wezterm.url = "github:wezterm/wezterm?dir=nix";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     deploy-rs.url = "github:serokell/deploy-rs";
+    inputs.hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =
@@ -49,6 +50,7 @@
                 "https://niri.cachix.org"
                 "https://ghostty.cachix.org"
                 "https://wezterm.cachix.org"
+                "https://hyprland.cachix.org"
               ];
 
               trusted-public-keys = [
@@ -57,6 +59,7 @@
                 "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
                 "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
                 "wezterm.cachix.org-1:kAbhjYUC9qvblTE+s7S+kl5XM1zVa4skO+E/1IDWdH0="
+                "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
               ];
             };
           }
