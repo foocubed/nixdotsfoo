@@ -10,7 +10,6 @@
     disko.url = "github:nix-community/disko/latest";
     disko.inputs.nixpkgs.follows = "nixpkgs-unstable";
     niri.url = "github:sodiboo/niri-flake";
-    niri.inputs.nixpkgs.follows = "nixpkgs-unstable";
     waybar.url = "github:Alexays/Waybar/master";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     ghostty.url = "github:ghostty-org/ghostty";
@@ -114,15 +113,5 @@
         ];
       };
 
-      deploy.nodes.xenos = {
-        hostname = "xenos";
-        profiles.system = {
-          user = "root";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.xenos;
-        };
-      };
-
-      # This is highly advised, and will prevent many possible mistakes
-      checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
     };
 }
