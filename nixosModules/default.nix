@@ -7,5 +7,6 @@
     ./wezterm.nix
     ./nh.nix
     ./hyprland.nix
+    ./sway.nix
   ];
 }
